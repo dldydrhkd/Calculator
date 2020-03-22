@@ -44,4 +44,18 @@ class ViewController: UIViewController {    //class
         
     }
     
+    
+    @IBAction func performOperation(_ sender: UIButton) {       //π 연산자 button
+        //7을 Copy하여 π를 만들었을 경우 touchdigit함수와도 연결되어있기 때문에 버튼에 오른쪽 마우스를 클릭하여 func를 삭제해야한다
+        userIsInTheMiddleOfTyping = false
+        //display에 π만 나오게 된다.
+        if let mathmaticalSymbol=sender.currentTitle {      //mathmaticlaSymbol이 currentTitle에 의해 set되면 구문을 실행. if문 밖에서 mathmaticlaSymbol은 정의되지도 않음
+            //'!'를 안 붙여도된다.
+            if mathmaticalSymbol=="π"{
+                display.text = String(M_PI)
+            }
+            
+        }
+    }
+    
 }
